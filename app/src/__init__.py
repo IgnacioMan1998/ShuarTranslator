@@ -1,0 +1,1 @@
+# Shuar Chicham Translator - Clean Architecture Implementation
