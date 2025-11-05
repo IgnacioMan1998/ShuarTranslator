@@ -47,7 +47,7 @@ app/
 
 2. **Create virtual environment**
    ```bash
-   python -m venv venv
+   python3 -m venv venv
    source venv/bin/activate  # On Windows: venv\Scripts\activate
    ```
 
@@ -62,9 +62,20 @@ app/
    # Edit .env with your Supabase credentials
    ```
 
-5. **Run the application**
+5. **Set up database**
    ```bash
-   python main.py
+   # Run these SQL files in your Supabase SQL editor in order:
+   # 1. app/core/infrastructure/database/migrations/000_create_phonological_system.sql
+   # 2. app/core/infrastructure/database/migrations/001_create_translation_tables.sql
+   # 3. app/core/infrastructure/database/migrations/002_create_dictionary_tables.sql  
+   # 4. app/core/infrastructure/database/migrations/003_seed_sample_data.sql
+   ```
+
+6. **Run the application**
+   ```bash
+   python3 main.py
+   # Or use the smart startup script:
+   python3 run.py
    ```
 
 6. **Access the API**
@@ -73,11 +84,15 @@ app/
 
 ## Features
 
+- **Comprehensive Dictionary**: Complete Shuar-Spanish dictionary with 20+ sample words
 - **Bidirectional Translation**: Shuar ↔ Spanish translation with automatic language detection
 - **Phonological Analysis**: Complete integration with Shuar phonological system (3 vocal types)
+- **Linguistic Detail**: Morphological analysis, IPA pronunciation, syllable breakdown
+- **Cultural Context**: Semantic fields, cultural significance, usage examples
+- **Dialectal Variants**: Support for Achuar, Shiwiar and other Shuar dialects
 - **Community Feedback**: Rating and suggestion system for translation improvements
 - **Expert Panel**: Administrative interface for linguistic experts
-- **Morphological Analysis**: Support for compound words and morphological decomposition
+- **Fuzzy Search**: Advanced search with similarity matching for partial words
 
 ## Development
 

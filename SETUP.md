@@ -16,7 +16,7 @@
 
 2. **Create virtual environment**
    ```bash
-   python -m venv venv
+   python3 -m venv venv
    source venv/bin/activate  # On Windows: venv\Scripts\activate
    ```
 
@@ -48,7 +48,7 @@
 
 6. **Run the application**
    ```bash
-   python main.py
+   python3 main.py
    ```
 
 ## API Endpoints
